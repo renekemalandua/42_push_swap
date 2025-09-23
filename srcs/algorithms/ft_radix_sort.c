@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 08:26:15 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 08:53:55 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 07:59:08 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 	int		size;
 	int		max_bits;
 
+	ft_putendl_fd("radix sort called", 1);
 	i = 0;
 	head_a = *stack_a;
 	size = ft_list_size(head_a);

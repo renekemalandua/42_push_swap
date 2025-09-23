@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 09:54:34 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 10:21:42 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 07:48:35 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ static void	ft_init_stack(t_list **stack, int argc, char **argv)
 	char	**args;
 	int		i;
 
+	i = 0;
 	if (argc == 2)
 		args = ft_split(argv[1], ' ');
 	else
@@ -25,7 +26,6 @@ static void	ft_init_stack(t_list **stack, int argc, char **argv)
 		i = 1;
 		args = argv;
 	}
-	i = 0;
 	while (args[i])
 	{
 		node = ft_list_new(ft_atoi(args[i]));

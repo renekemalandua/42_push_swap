@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 22:30:29 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 09:28:24 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:15:37 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@
 
 typedef struct s_list
 {
-	struct s_list	*next;
-	int				data;
+	int				value;
 	int				index;
-}	t_list;
+	struct s_list	*next;
+}				t_list;
 
 // List utils
 t_list	*ft_list_last(t_list *head);
 int		ft_list_size(t_list *head);
 void	ft_print_list(t_list *head);
+
+t_list	*ft_lstlast(t_list *head);
+int		ft_lstsize(t_list *head);
+void	printList(t_list *head);
 
 t_list	*ft_list_new(int data);
 void	ft_list_push_front(t_list **stack, t_list *node);
@@ -57,7 +61,7 @@ int		ss(t_list **stack_a, t_list **stack_b);
 int		rotate(t_list **stack);
 int		ra(t_list **stack_a);
 int		rb(t_list **stack_b);
-int		rr(t_list **stack_a, t_list *stack_b);
+int		rr(t_list **stack_a, t_list **stack_b);
 
 int		reverse_rotate(t_list **stack);
 int		rra(t_list **stack_a);

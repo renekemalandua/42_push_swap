@@ -6,7 +6,7 @@
 #    By: akemalan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 22:07:11 by akemalan          #+#    #+#              #
-#    Updated: 2025/08/29 09:55:17 by akemalan         ###   ########.fr        #
+#    Updated: 2025/09/23 08:54:37 by akemalan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,24 @@
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iincludes
+CHECK = checker
 
-SRCS = \
-	ft_read_list_utils.c ft_write_list_utils.c ft_args_utils.c ft_stack_index_utils.c \
-	ft_stack_move_utils.c ft_push.c ft_swap.c ft_rotate.c ft_reverse_rotate.c ft_radix_sort.c \
-	ft_simple_sort.c main.c
-	
-OBJS = $(SRCS:.c=.o)
+# /* ~~~~~~ SOURCES ~~~~~~ */
+SRCS_DIR = ./srcs/
+SRCS =  algorithms/ft_radix_sort.c\
+		algorithms/ft_simple_sort.c\
+		instructions/ft_push.c\
+		instructions/ft_swap.c\
+		instructions/ft_rotate.c\
+		instructions/ft_reverse_rotate.c\
+		utils/ft_args_utils.c\
+		utils/ft_read_list_utils.c\
+		utils/ft_write_list_utils.c\
+		utils/ft_stack_index_utils.c\
+		utils/ft_stack_move_utils.c\
+		main.c
+
+OBJS = ${addprefix ${SRCS_DIR}, ${SRCS:.c=.o}}
 
 all: $(NAME)
 

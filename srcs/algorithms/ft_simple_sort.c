@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 09:04:53 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 09:36:10 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 07:58:24 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ void	simple_sort(t_list **stack_a, t_list **stack_b)
 {
 	int	size;
 
+	ft_putendl_fd("simple sort called", 1);
 	if (ft_is_sorted(stack_a) || ft_list_size(*stack_a) == 0
 		|| ft_list_size(*stack_a) == 1)
 		return ;

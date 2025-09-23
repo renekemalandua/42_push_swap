@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 07:02:54 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 07:54:35 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 07:40:27 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,23 @@ int	rotate(t_list **stack)
 
 int	ra(t_list **stack_a)
 {
-	if (rotate(*stack_a) == -1)
+	if (rotate(stack_a) == -1)
 		return (-1);
-	ft_putendl_fd("rb", 1);
+	ft_putendl_fd("ra", 1);
 	return (0);
 }
 
 int	rb(t_list **stack_b)
 {
-	if (rotate(*stack_b) == -1)
+	if (rotate(stack_b) == -1)
 		return (-1);
 	ft_putendl_fd("rb", 1);
 	return (0);
 }
 
-int	rr(t_list **stack_a, t_list *stack_b)
+int	rr(t_list **stack_a, t_list **stack_b)
 {
-	if ((ft_list_size(*stack_a) < 2) || (ft_list_size(stack_b) < 2))
+	if ((ft_list_size(*stack_a) < 2) || (ft_list_size(*stack_b) < 2))
 		return (-1);
 	rotate(stack_a);
 	rotate(stack_b);
