@@ -6,45 +6,44 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 23:45:53 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/28 00:30:36 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:21:18 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_list_new(int data)
+t_list	*ft_lstnew(int value)
 {
-	t_list	*node;
+	t_list	*new;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
+	new = (t_list *) malloc(sizeof(*new));
+	if (!new)
 		return (NULL);
-	node->data = data;
-	node->next = NULL;
-	return (node);
+	new->value = value;
+	new->index = -1;
+	new->next = NULL;
+	return (new);
 }
 
-void	ft_list_push_front(t_list **stack, t_list *node)
+void	ft_lstadd_front(t_list **stack, t_list *new)
 {
-	if (!stack || !node)
-		return ;
-	node->next = *stack;
-	*stack = node;
+	new->next = *stack;
+	*stack = new;
 }
 
-void	ft_list_push_back(t_list **stack, t_list *node)
+void	ft_lstadd_back(t_list **stack, t_list *new)
 {
-	t_list	*temp;
+	t_list	*n;
 
-	if (!stack || !node)
-		return ;
-	if (!*stack)
+	if (*stack)
 	{
-		*stack = node;
-		return ;
+		n = ft_lstlast(*stack);
+		n->next = new;
+		new->next = NULL;
 	}
-	temp = *stack;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = node;
+	else
+	{
+		*stack = new;
+		(*stack)->next = NULL;
+	}
 }

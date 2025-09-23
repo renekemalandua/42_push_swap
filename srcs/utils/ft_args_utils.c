@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 00:42:50 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/28 07:10:15 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:27:01 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_check_args(int argc, char **argv)
 {
 	int		i;
 	long	tmp;
-	char	**args;	
+	char	**args;
 
 	i = 0;
 	if (argc == 2)

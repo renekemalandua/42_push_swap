@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:37:57 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/28 09:58:31 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:50:08 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ int	swap(t_list **stack)
 {
 	t_list	*head;
 	t_list	*next;
-	int		temp_data;
-	int		temp_index;
+	int		tmp_val;
+	int		tmp_index;
 
-	if (ft_list_size(*stack) < 2)
+	if (ft_lstsize(*stack) < 2)
 		return (-1);
 	head = *stack;
 	next = head->next;
 	if (!head && !next)
-		ft_error("ERROR: Unexpeted error while swapping");
-	temp_data = head->data;
-	temp_index = head->index;
-	head->data = next->data;
-	head->data = next->index;
-	next->data = temp_data;
-	next->index = temp_index;
+		ft_error("Error occured while swapping!");
+	tmp_val = head->value;
+	tmp_index = head->index;
+	head->value = next->value;
+	head->index = next->index;
+	next->value = tmp_val;
+	next->index = tmp_index;
 	return (0);
 }
 
@@ -52,7 +52,7 @@ int	sb(t_list **stack_b)
 
 int	ss(t_list **stack_a, t_list **stack_b)
 {
-	if ((ft_list_size(*stack_a) < 2) || (ft_list_size(*stack_b) < 2))
+	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);

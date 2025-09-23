@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:34:31 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/28 09:59:37 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:46:46 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 int	push(t_list **stack_to, t_list **stack_from)
 {
-	t_list	*temp;
+	t_list	*tmp;
 	t_list	*head_to;
 	t_list	*head_from;
 
-	if (ft_list_size(*stack_from) == 0)
+	if (ft_lstsize(*stack_from) == 0)
 		return (-1);
 	head_to = *stack_to;
 	head_from = *stack_from;
-	temp = head_from;
+	tmp = head_from;
 	head_from = head_from->next;
 	*stack_from = head_from;
 	if (!head_to)
 	{
-		head_to = temp;
+		head_to = tmp;
 		head_to->next = NULL;
 		*stack_to = head_to;
 	}
 	else
 	{
-		temp->next = head_to;
-		*stack_to = temp;
+		tmp->next = head_to;
+		*stack_to = tmp;
 	}
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 00:46:55 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 09:26:51 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 20:05:45 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_list	*ft_get_next_min(t_list **stack)
+static t_list	*get_next_min(t_list **stack)
 {
 	t_list	*head;
 	t_list	*min;
@@ -25,7 +25,7 @@ static t_list	*ft_get_next_min(t_list **stack)
 	{
 		while (head)
 		{
-			if ((head->index == -1) && (!has_min || head->data < min->data))
+			if ((head->index == -1) && (!has_min || head->value < min->value))
 			{
 				min = head;
 				has_min = 1;
@@ -36,35 +36,35 @@ static t_list	*ft_get_next_min(t_list **stack)
 	return (min);
 }
 
-void	ft_index_stack(t_list **stack)
+void	index_stack(t_list **stack)
 {
 	t_list	*head;
 	int		index;
 
 	index = 0;
-	head = ft_get_next_min(stack);
+	head = get_next_min(stack);
 	while (head)
 	{
 		head->index = index++;
-		head = ft_get_next_min(stack);
+		head = get_next_min(stack);
 	}
 }
 
-int	ft_is_sorted(t_list **stack)
+int	is_sorted(t_list **stack)
 {
 	t_list	*head;
 
 	head = *stack;
 	while (head && head->next)
 	{
-		if (head->data > head->next->data)
+		if (head->value > head->next->value)
 			return (0);
 		head = head->next;
 	}
 	return (1);
 }
 
-int	ft_get_min(t_list **stack, int data)
+int	get_min(t_list **stack, int val)
 {
 	t_list	*head;
 	int		min;
@@ -74,7 +74,7 @@ int	ft_get_min(t_list **stack, int data)
 	while (head->next)
 	{
 		head = head->next;
-		if ((head->index < min) && (head->index != data))
+		if ((head->index < min) && head->index != val)
 			min = head->index;
 	}
 	return (min);

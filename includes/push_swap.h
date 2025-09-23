@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 22:30:29 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 19:15:37 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 20:03:44 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,25 @@ typedef struct s_list
 }				t_list;
 
 // List utils
-t_list	*ft_list_last(t_list *head);
-int		ft_list_size(t_list *head);
-void	ft_print_list(t_list *head);
-
 t_list	*ft_lstlast(t_list *head);
 int		ft_lstsize(t_list *head);
-void	printList(t_list *head);
 
-t_list	*ft_list_new(int data);
-void	ft_list_push_front(t_list **stack, t_list *node);
-void	ft_list_push_back(t_list **stack, t_list *node);
+t_list	*ft_lstnew(int value);
+void	ft_lstadd_front(t_list **stack, t_list *new);
+void	ft_lstadd_back(t_list **stack, t_list *new);
 
 void	ft_error(char *msg);
 void	ft_check_args(int argc, char **argv);
 void	ft_free(char **str);
 
-int		ft_get_distance(t_list **stack, int index);
-void	ft_make_top(t_list **stack, int distance);
-void	ft_free_stack(t_list **stack);
+int		get_distance(t_list **stack, int index);
+void	make_top(t_list **stack, int distance);
+void	free_stack(t_list **stack);
 
 // Algorithm utils
-void	ft_index_stack(t_list **stack);
-int		ft_is_sorted(t_list **stack);
-int		ft_get_min(t_list **stack, int data);
+int		is_sorted(t_list **stack);
+void	index_stack(t_list **stack);
+int		get_min(t_list **stack, int val);
 
 // Instructions
 int		push(t_list **stack_to, t_list **stack_from);

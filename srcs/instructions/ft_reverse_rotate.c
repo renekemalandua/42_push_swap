@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 07:35:31 by akemalan          #+#    #+#             */
-/*   Updated: 2025/08/29 07:55:57 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/23 19:55:22 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	reverse_rotate(t_list **stack)
 	t_list	*head;
 	t_list	*tail;
 
-	if (ft_list_size(*stack) < 2)
+	if (ft_lstsize(*stack) < 2)
 		return (-1);
 	head = *stack;
-	tail = ft_list_last(head);
+	tail = ft_lstlast(head);
 	while (head)
 	{
 		if (head->next->next == NULL)
@@ -53,10 +53,11 @@ int	rrb(t_list **stack_b)
 
 int	rrr(t_list **stack_a, t_list **stack_b)
 {
-	if ((ft_list_size(*stack_a) < 2) || (ft_list_size(*stack_b) < 2))
+	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
 	ft_putendl_fd("rrr", 1);
 	return (0);
 }
+
