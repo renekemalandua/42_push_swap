@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 08:13:28 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/26 08:46:12 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:52:22 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static void	assign_indices_to_stack(t_list *stack, int *sorted, int size)
 }
 
 // Função pública: indexa a stack
-void	bs_index_stack(t_list **stack)
+void	index_stack_bs(t_list **stack)
 {
 	int size;
 	int *sorted;

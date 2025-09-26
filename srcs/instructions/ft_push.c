@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:34:31 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 19:46:46 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:54:03 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	push(t_list **stack_to, t_list **stack_from)
 		tmp->next = head_to;
 		*stack_to = tmp;
 	}
+	g_operation_count++;
 	return (0);
 }
 

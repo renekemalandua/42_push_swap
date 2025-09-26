@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 07:35:31 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 19:55:22 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:54:18 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	reverse_rotate(t_list **stack)
 	}
 	tail->next = *stack;
 	*stack = tail;
+	g_operation_count++;
 	return (0);
 }
 

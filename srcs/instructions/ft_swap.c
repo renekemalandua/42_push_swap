@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:37:57 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 19:50:08 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:54:56 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	swap(t_list **stack)
 	head->index = next->index;
 	next->value = tmp_val;
 	next->index = tmp_index;
+	g_operation_count++;
 	return (0);
 }
 

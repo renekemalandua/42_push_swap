@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 07:02:54 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 19:52:01 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:54:35 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	rotate(t_list **stack)
 	*stack = head->next;
 	head->next = NULL;
 	tail->next = head;
+	g_operation_count++;
 	return (0);
 }
 

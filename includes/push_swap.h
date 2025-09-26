@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 22:30:29 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/26 08:48:01 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:51:18 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	sort_5(t_list **stack_a, t_list **stack_b);
 void	simple_sort(t_list **stack_a, t_list **stack_b);
 void	chunk_sort(t_list **stack_a, t_list **stack_b);
 
-//extern int	g_operation_count;
-//void	feedback_operations(int argc, int total_ops);
+extern int	g_operation_count;
+void	feedback_operations(int argc, int total_ops);
 
 #endif

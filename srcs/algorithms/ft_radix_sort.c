@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 08:26:15 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/26 08:49:34 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 09:05:23 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,15 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 	int		size;
 	int		max_bits;
 
+	// 1️⃣ gerar índices com bubble sort
+	index_stack_bs(stack_a);
+
 	i = 0;
 	head_a = *stack_a;
 	size = ft_lstsize(head_a);
 	max_bits = get_max_bits(stack_a);
+
+	// 2️⃣ radix sort usando os índices
 	while (i < max_bits)
 	{
 		j = 0;
@@ -60,3 +65,4 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 		i++;
 	}
 }
+

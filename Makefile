@@ -6,7 +6,7 @@
 #    By: akemalan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 22:07:11 by akemalan          #+#    #+#              #
-#    Updated: 2025/09/26 08:46:39 by akemalan         ###   ########.fr        #
+#    Updated: 2025/09/26 08:58:37 by akemalan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS_DIR = ./srcs/
 SRCS =  algorithms/ft_radix_sort.c\
 		algorithms/ft_simple_sort.c\
 		algorithms/ft_chunk_sort.c\
+		algorithms/ft_bubble_sort.c\
 		instructions/ft_push.c\
 		instructions/ft_swap.c\
 		instructions/ft_rotate.c\
@@ -30,6 +31,7 @@ SRCS =  algorithms/ft_radix_sort.c\
 		utils/ft_write_list_utils.c\
 		utils/ft_stack_index_utils.c\
 		utils/ft_stack_move_utils.c\
+		test/global.c\
 		main.c
 
 OBJS = ${addprefix ${SRCS_DIR}, ${SRCS:.c=.o}}
@@ -47,16 +49,16 @@ $(NAME): $(OBJS)
 	${CC} ${CFLAGS} ${OBJS} ./libft/libft.a -o ${NAME}
 
 run5:
-	./$(NAME) $(STACK5) | ./$(CHECK) $(STACK5)
+	./$(NAME) $(STACK5)
 
 run25:
-	./$(NAME) $(STACK25) | ./$(CHECK) $(STACK25)
+	./$(NAME) $(STACK25)
 
 run100:
-	./$(NAME) $(STACK100) | ./$(CHECK) $(STACK100)
+	./$(NAME) $(STACK100)
 
 run500:
-	./$(NAME) $(STACK500) | ./$(CHECK) $(STACK500)
+	./$(NAME) $(STACK500)
 
 clean:
 	${MAKE} -C ./libft fclean

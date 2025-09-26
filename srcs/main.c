@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 09:54:34 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/26 08:41:00 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 09:14:22 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	sort_stack(t_list **stack_a, t_list **stack_b)
 	if (ft_lstsize(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);
 	else
-		radix_sort(stack_a, stack_b);
+		chunk_sort(stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)
@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 	sort_stack(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
-	//feedback_operations(argc, g_operation_count);
+	feedback_operations(argc, g_operation_count);
 	return (0);
 }
 
