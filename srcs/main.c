@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 09:54:34 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 20:02:16 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:41:00 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	main(int argc, char **argv)
 	sort_stack(stack_a, stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
+	//feedback_operations(argc, g_operation_count);
 	return (0);
 }
 

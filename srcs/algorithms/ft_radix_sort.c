@@ -6,13 +6,13 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 08:26:15 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 20:00:55 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:49:34 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	get_max_bits(t_list **stack)
+int	get_max_bits(t_list **stack)
 {
 	t_list	*head;
 	int		max;

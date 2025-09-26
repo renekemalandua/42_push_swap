@@ -6,7 +6,7 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 22:30:29 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/23 20:03:44 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/09/26 08:48:01 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -42,6 +43,8 @@ void	free_stack(t_list **stack);
 int		is_sorted(t_list **stack);
 void	index_stack(t_list **stack);
 int		get_min(t_list **stack, int val);
+int		get_max_bits(t_list **stack);
+void	index_stack_bs(t_list **stack);
 
 // Instructions
 int		push(t_list **stack_to, t_list **stack_from);
@@ -67,5 +70,9 @@ int		rrr(t_list **stack_a, t_list **stack_b);
 void	radix_sort(t_list **stack_a, t_list **stack_b);
 void	sort_5(t_list **stack_a, t_list **stack_b);
 void	simple_sort(t_list **stack_a, t_list **stack_b);
+void	chunk_sort(t_list **stack_a, t_list **stack_b);
+
+//extern int	g_operation_count;
+//void	feedback_operations(int argc, int total_ops);
 
 #endif
