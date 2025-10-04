@@ -6,7 +6,7 @@
 #    By: akemalan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 22:07:11 by akemalan          #+#    #+#              #
-#    Updated: 2025/09/26 08:58:37 by akemalan         ###   ########.fr        #
+#    Updated: 2025/10/04 18:42:14 by akemalan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,20 +18,18 @@ CHECK = checker
 
 # /* ~~~~~~ SOURCES ~~~~~~ */
 SRCS_DIR = ./srcs/
-SRCS =  algorithms/ft_radix_sort.c\
-		algorithms/ft_simple_sort.c\
-		algorithms/ft_chunk_sort.c\
-		algorithms/ft_bubble_sort.c\
-		instructions/ft_push.c\
-		instructions/ft_swap.c\
-		instructions/ft_rotate.c\
-		instructions/ft_reverse_rotate.c\
-		utils/ft_args_utils.c\
-		utils/ft_read_list_utils.c\
-		utils/ft_write_list_utils.c\
-		utils/ft_stack_index_utils.c\
-		utils/ft_stack_move_utils.c\
-		test/global.c\
+SRCS =  algorithms/ft_sort_three.c\
+		algorithms/ft_push_swap.c\
+		operations/ft_push.c\
+		operations/ft_swap.c\
+		operations/ft_rotate.c\
+		operations/ft_reverse_rotate.c\
+		utils/ft_stack_utils.c\
+		utils/ft_mut_split.c\
+		utils/ft_error_utils.c\
+		init/ft_init_stack.c\
+		init/ft_init_node_a_to_b.c\
+		init/ft_init_node_b_to_a.c\
 		main.c
 
 OBJS = ${addprefix ${SRCS_DIR}, ${SRCS:.c=.o}}
