@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 11:04:24 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 11:05:28 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:19:59 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	sort_three(t_stack **a)
 {

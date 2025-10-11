@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 19:34:57 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/27 20:03:10 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 16:01:40 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	push(t_stack **dest, t_stack **src)
 {

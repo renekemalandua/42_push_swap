@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 18:54:06 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/27 19:28:01 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:48:37 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	stack_len(t_stack *stack)
 {
@@ -56,7 +56,7 @@ t_stack	*find_min(t_stack *stack)
 	return (min_node);
 }
 
-t_stack *find_max(t_stack *stack)
+t_stack	*find_max(t_stack *stack)
 {
 	long	max;
 	t_stack	*max_node;
@@ -76,15 +76,13 @@ t_stack *find_max(t_stack *stack)
 	return (max_node);
 }
 
-bool	stack_sorted(t_stack *stack)
+void	min_on_top(t_stack **a)
 {
-	if (!stack)
-		return (true);
-	while (stack->next)
+	while ((*a)->nbr != find_min(*a)->nbr)
 	{
-		if (stack->nbr > stack->next->nbr)
-			return (false);
-		stack = stack->next;
+		if (find_min(*a)->above_median)
+			ra(a, false);
+		else
+			rra(a, false);
 	}
-	return (true);
 }

@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 10:41:21 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 11:18:37 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:49:01 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	error_syntax(char *str_n)
 {

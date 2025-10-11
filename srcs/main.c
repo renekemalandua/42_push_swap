@@ -6,11 +6,24 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 11:12:55 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 11:22:11 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:49:56 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/push_swap.h"
+#include "../includes/push_swap.h"
+
+bool	stack_sorted(t_stack *stack)
+{
+	if (!stack)
+		return (true);
+	while (stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
+}
 
 int	main(int argc, char **argv)
 {

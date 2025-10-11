@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 10:48:57 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 10:52:12 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:34:29 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static long	ft_atol(const char *s)
 {
@@ -20,7 +20,7 @@ static long	ft_atol(const char *s)
 	result = 0;
 	sign = 1;
 	while (*s == ' ' || *s == '\t' || *s == '\n' || \
-			*s == '\r' || *s == '\f' || *s == '\v')
+*s == '\r' || *s == '\f' || *s == '\v')
 		s++;
 	if (*s == '-' || *s == '+')
 	{
@@ -46,7 +46,6 @@ static void	append_node(t_stack **stack, int n)
 	node->next = NULL;
 	node->nbr = n;
 	node->cheapest = 0;
-
 	if (!(*stack))
 	{
 		*stack = node;

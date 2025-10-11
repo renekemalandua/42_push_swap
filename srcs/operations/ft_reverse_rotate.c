@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 21:07:00 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/27 21:13:06 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 16:01:47 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	rev_rotate(t_stack **stack)
 {

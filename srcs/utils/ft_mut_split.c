@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 10:37:57 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 10:40:41 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:44:40 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static int	count_words(char *s, char c)
 {
@@ -58,7 +58,7 @@ static char	*get_next_word(char *s, char c)
 	return (next_word);
 }
 
-char **mut_split(char *s, char c)
+char	**mut_split(char *s, char c)
 {
 	int		words_count;
 	char	**result_array;
@@ -86,4 +86,3 @@ char **mut_split(char *s, char c)
 	result_array[i] = NULL;
 	return (result_array);
 }
-

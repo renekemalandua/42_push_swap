@@ -6,11 +6,11 @@
 /*   By: akemalan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 10:54:18 by akemalan          #+#    #+#             */
-/*   Updated: 2025/09/28 10:59:43 by akemalan         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:36:55 by akemalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	current_index(t_stack *stack)
 {
@@ -37,7 +37,7 @@ static void	set_target_a(t_stack *a, t_stack *b)
 {
 	t_stack	*current_b;
 	t_stack	*target_node;
-	long			best_match_index;
+	long	best_match_index;
 
 	while (a)
 	{
@@ -83,7 +83,7 @@ static void	cost_analysis_a(t_stack *a, t_stack *b)
 
 void	set_cheapest(t_stack *stack)
 {
-	long			cheapest_value;
+	long	cheapest_value;
 	t_stack	*cheapest_node;
 
 	if (!stack)
